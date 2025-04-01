@@ -22,7 +22,7 @@ export const TaskInput = ({ addTask }: TaskInputProps) => {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={s.taskInput}>
 			<input type='text' placeholder='Введите задачу' {...register('task')} />
-			<button type='submit'>
+			<button type='submit' aria-label='Add'>
 				<FaPlus />
 			</button>
 		</form>

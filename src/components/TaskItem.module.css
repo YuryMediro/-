@@ -1,22 +1,22 @@
-.taskItem {
+.taskItems {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #dddcdc;
 }
-.taskItem span {
+.taskItems span {
   flex: 1;
   font-size: 22px;
   cursor: pointer;
 }
 
-.taskItem.completed span {
+.completed  {
   text-decoration: line-through;
   color: #4add82;
 }
 
-.taskItem button {
+.taskItems button {
   background: none;
   border: none;
   color: #e74c3c;
@@ -24,7 +24,7 @@
   font-size: 18px;
 }
 
-.taskItem button:hover {
+.taskItems button:hover {
   color: #8b1604;
    transition: 0.3s;
 }

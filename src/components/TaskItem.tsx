@@ -9,8 +9,11 @@ interface TaskItemProps {
 
 export const TaskItem = ({ task, deleteTask, toggleTask }: TaskItemProps) => {
 	return (
-		<li  className={clsx(s.taskItem, { [s.completed]: task.completed })}>
-			<span onClick={() => toggleTask(task.id)}>
+		<li className={s.taskItems}>
+			<span
+				className={clsx(s.taskItem, { [s.completed]: task.completed })}
+				onClick={() => toggleTask(task.id)}
+			>
 				{task.completed ? <FaCheck /> : null} {task.text}
 			</span>
 			<button onClick={() => deleteTask(task.id)}>

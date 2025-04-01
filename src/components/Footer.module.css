@@ -1,55 +1,84 @@
 .footer {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
 	background-color: #f9f9f9;
 	border-top: 1px solid #ddd;
+	gap: 10px;
 }
- .footer span {
+.footer span {
 	font-size: 16px;
 	color: #555;
 }
+.filters {
+	display: flex;
+	order: 3;
+	width: 100%;
+	justify-content: center;
+	margin: 10px 0;
+}
 
 .filters button {
-    margin-left: 5px;
-	padding: 5px 10px;
+	margin: 0 5px;
+	padding: 5px 8px;
 	background-color: #fff;
 	border: 1px solid #c4c0c0;
 	border-radius: 5px;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 14px;
 }
 .filters button:hover {
 	background-color: #0056b3;
 	color: white;
 }
-.reset{
-    background-color: #e74c3c;
-    color: white;
-	border: none;
-    font-size: 16px;
-	border-radius: 4px;
-	padding: 5px 10px;
-	cursor: pointer;
-}
-.reset:hover{
-    background-color: #8b1604;
-    transition: 0.3s;
-}
-/*
-
-
-.footer button:last-child {
-	margin-left: auto;
+.reset {
+	order: 2;
 	background-color: #e74c3c;
 	color: white;
 	border: none;
+	font-size: 14px;
 	border-radius: 4px;
-	padding: 5px 10px;
+	padding: 5px 8px;
 	cursor: pointer;
 }
+.reset:hover {
+	background-color: #8b1604;
+	transition: 0.3s;
+}
 
-.footer button:last-child:hover {
-	background-color: #c0392b;
-} */
+.activeFilter {
+	background-color: #0056b3 !important;
+	color: white !important;
+	border-color: #0056b3 !important;
+}
+
+@media (min-width: 526px) and (max-width: 768px) {
+  .footer {
+    flex-wrap: nowrap;
+  }
+  
+  .filters {
+    order: initial;
+    width: auto;
+    margin: 0;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .footer {
+    flex-wrap: nowrap;
+  }
+  
+  .filters {
+    order: initial;
+    width: auto;
+    margin: 0;
+  }
+  
+  .reset {
+    order: initial;
+  }
+}

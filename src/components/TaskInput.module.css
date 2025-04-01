@@ -1,6 +1,6 @@
 .taskInput {
   display: flex;
-  padding: 10px;
+  padding: 10px 0 20px 0;
   border-bottom: 1px solid #500303da;
 }
 
@@ -26,4 +26,13 @@
 .taskInput button:hover {
   background-color:#4add82;
   transition: 0.3s;
+}
+
+@media (max-width: 526px) {
+	.taskInput input {
+		font-size: 16px;
+	}
+	.taskInput button {
+		font-size: 16px;
+	}
 }

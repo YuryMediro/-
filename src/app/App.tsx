@@ -28,6 +28,7 @@ export const App = () => {
 					tasks={tasks}
 					clearCompleted={clearCompleted}
 					setFilter={setFilter}
+					 currentFilter={filter}
 				/>
 			</div>
 		</div>

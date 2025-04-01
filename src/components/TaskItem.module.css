@@ -1,0 +1,30 @@
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #dddcdc;
+}
+.taskItem span {
+  flex: 1;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.taskItem.completed span {
+  text-decoration: line-through;
+  color: #4add82;
+}
+
+.taskItem button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.taskItem button:hover {
+  color: #8b1604;
+   transition: 0.3s;
+}

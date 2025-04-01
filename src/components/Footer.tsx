@@ -10,14 +10,14 @@ export const Footer = ({ tasks, clearCompleted, setFilter }: FooterProps) => {
 	const remaining = tasks.filter(task => !task.completed).length
 
 	return (
-		<footer>
+		<footer className={s.footer}>
 			<span>{remaining} items left</span>
 			<div className={s.filters}>
 				<button onClick={() => setFilter('all')}>All</button>
 				<button onClick={() => setFilter('active')}>Active</button>
 				<button onClick={() => setFilter('completed')}>Completed</button>
 			</div>
-			<button onClick={clearCompleted}>Clear completed</button>
+			<button className={s.reset} onClick={clearCompleted}>Clear completed</button>
 		</footer>
 	)
 }

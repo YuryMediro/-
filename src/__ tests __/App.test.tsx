@@ -3,7 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { App } from '../app/App'
 import { act } from 'react'
 
-// 1. Тестирование добавления новой задачи
+// 1. добавление новой задачи
 test('add task', async () => {
 	render(<App />)
 	const input = screen.getByPlaceholderText('Введите задачу')
@@ -21,7 +21,7 @@ test('add task', async () => {
 	})
 })
 
-  // 2. Тестирование переключения статуса задачи
+  // 2. переключение статуса задачи
   test('toggle task', async () => {
     render(<App />);
     const input = screen.getByPlaceholderText('Введите задачу');
